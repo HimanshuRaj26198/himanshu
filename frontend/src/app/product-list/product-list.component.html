@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Get Best Deals</h1>
+<div style="text-align: right; margin-right: 2%;">
+  <p style="color: blue; cursor: pointer;" (click)="sortName()">Sort by Price</p>
+</div>
+<div style="margin: 5%;" class="row">
+   
+    <div *ngFor="let item of collection"  class="col-md-4 ">
+        <div class="card" style="width: 18rem; margin-bottom: 55px;">
+            <img style="height: 265px; width: auto;"  src="{{item.filePath}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">{{item.description}}</p>
+              <p class="card-text">{{item.price}}</p>
+              <a routerLink="product/{{item._id}}" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    </div>  
